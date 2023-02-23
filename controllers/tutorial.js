@@ -1,5 +1,5 @@
 const { response } = require('express');
-const Tutorial = require('../models/tutorial.model');
+const Tutorial = require('../models/tutorial');
 
 // Recupere todos los tutoriales de la base de datos.
 const getTutorials = async (req, res = response) => {

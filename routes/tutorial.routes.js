@@ -11,7 +11,7 @@ const {
     updateTutorial,
     deleteTutorial,
     deleteAllTutorials
-} = require('../controllers/tutorial.controller');
+} = require('../controllers/tutorial');
 
 const router = Router();
 
