@@ -8,20 +8,20 @@ require('dotenv').config();
 // Crear aplicacion de express
 const app = express();
 
-// Base de datos
-dbConnection();
-
 // Coors
 app.use(cors())
 
-// Directorio publico
-app.use(express.static('public'));
+// Base de datos
+dbConnection();
 
 // Lectura y parseo del body
 app.use(express.json());
 
 // Rutas
 app.use('/api/tutorials/', require('./routes/tutorial.routes'));
+
+// Directorio publico
+app.use(express.static('public'));
 
 // Tratar rutas al subir proyecto en un servidor - React
 app.get('*', (req, res) => {
